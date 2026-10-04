@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Palla Siva Sai — Database Developer Portfolio. SQL, MySQL, SQLite, database design, triggers and data-driven applications." />
+  <title>Palla Siva Sai | Database Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header class="nav">
+    <a class="brand" href="#home"><span>PS</span> Palla Siva Sai</a>
+    <nav>
+      <a href="#about">About</a><a href="#skills">DB Skills</a><a href="#projects">Projects</a><a href="#sql">SQL Lab</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-btn" href="https://github.com/Palla-siva-sai" target="_blank">GitHub ↗</a>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> DATABASE-FOCUSED PORTFOLIO</div>
+        <h1>Designing data systems that <em>work.</em></h1>
+        <p class="lead">I'm <strong>Palla Siva Sai</strong>, an aspiring software developer focused on SQL, relational database design, MySQL, SQLite, triggers, authentication and data-driven applications.</p>
+        <div class="actions">
+          <a class="primary" href="#projects">Explore database projects <span>↓</span></a>
+          <a class="secondary" href="https://github.com/Palla-siva-sai" target="_blank">View source on GitHub ↗</a>
+        </div>
+        <div class="terminal-mini"><span class="green">siva@db-lab</span><span>:</span><span class="blue">~/portfolio</span><span>$</span> SELECT * FROM <b>projects</b> WHERE domain = 'database';<span class="cursor"></span></div>
+      </div>
+      <div class="db-card">
+        <div class="db-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="db-title">database_architecture.sql</span></div>
+        <pre><code><span class="kw">CREATE TABLE</span> users (
+  id <span class="type">INT</span> <span class="kw">PRIMARY KEY</span>,
+  name <span class="type">VARCHAR</span>(100),
+  email <span class="type">VARCHAR</span>(150) <span class="kw">UNIQUE</span>,
+  created_at <span class="type">TIMESTAMP</span>
+);
+
+<span class="kw">CREATE INDEX</span> idx_email
+<span class="kw">ON</span> users(email);
+
+<span class="comment">-- reliable data starts with a
+-- well-designed schema</span></code></pre>
+        <div class="db-status"><span>●</span> MySQL / SQLite / SQL Ready</div>
+      </div>
+    </section>
+
+    <section id="about" class="section compact">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="two-col">
+        <div><h2>From schema to <span>working software.</span></h2></div>
+        <div><p>I build applications where the database is more than storage — it is part of the product logic. My portfolio includes banking transaction workflows, CRUD learning systems, authentication, voting and HR analytics.</p><p class="muted">MCA · KL University · 9.45 CGPA</p></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-label">02 / DATABASE TOOLKIT</div>
+      <div class="skill-grid">
+        <article class="skill"><div class="icon">SQL</div><h3>SQL & Relational Design</h3><p>Queries, CRUD operations, relationships, constraints, schema design and data workflows.</p><div class="tags"><span>SQL</span><span>DBMS</span><span>Schema Design</span></div></article>
+        <article class="skill"><div class="icon">MY</div><h3>MySQL</h3><p>Production-style relational projects covering authentication, banking and voting workflows.</p><div class="tags"><span>MySQL</span><span>PHP</span><span>Transactions</span></div></article>
+        <article class="skill"><div class="icon">TR</div><h3>Triggers & Automation</h3><p>Time-based database logic for transaction monitoring and automatic business workflows.</p><div class="tags"><span>SQL Triggers</span><span>Rollback</span><span>Automation</span></div></article>
+        <article class="skill"><div class="icon">SQ</div><h3>SQLite & Analytics</h3><p>Database-driven HR management, performance, attendance, leave and reporting systems.</p><div class="tags"><span>SQLite</span><span>Python</span><span>Pandas</span></div></article>
+        <article class="skill"><div class="icon">API</div><h3>Application Integration</h3><p>Connecting frontend forms and backend application logic to persistent database workflows.</p><div class="tags"><span>React</span><span>PHP</span><span>Python</span></div></article>
+        <article class="skill"><div class="icon">SEC</div><h3>Data & Authentication</h3><p>User accounts, sessions, secure workflows and database-backed access control.</p><div class="tags"><span>Sessions</span><span>Auth</span><span>Data Security</span></div></article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-label">03 / DATABASE PROJECTS</div>
+      <div class="project-heading"><h2>Projects built around <span>data.</span></h2><p>Only database and data-centric work from my GitHub profile is featured here.</p></div>
+      <div class="projects">
+        <article class="project featured">
+          <div class="project-number">01</div><div class="project-body">
+            <div class="project-meta"><span>MYSQL · SQL TRIGGERS</span><a href="https://github.com/pallasivasai/saibank" target="_blank">Repository ↗</a></div>
+            <h3>SAIBANK</h3>
+            <p>Banking system featuring a time-bound payment reversal mechanism using SQL triggers for transaction monitoring and rollback.</p>
+            <div class="architecture"><span>React / TypeScript</span><b>→</b><span>Lovable Cloud</span><b>→</b><strong>MySQL + Triggers</strong></div>
+            <div class="tags"><span>MySQL</span><span>SQL Triggers</span><span>Transactions</span><span>React</span><span>TypeScript</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-number">02</div><div class="project-body">
+            <div class="project-meta"><span>SQL · REACT</span><a href="https://github.com/pallasivasai/sai-crudop" target="_blank">Repository ↗</a></div>
+            <h3>Sai CRUD Operations Lab</h3>
+            <p>Interactive Telugu learning lab showing how browser forms map to database records and the SQL query being executed.</p>
+            <div class="tags"><span>SQL</span><span>CRUD</span><span>React</span><span>TypeScript</span><span>Tailwind</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-number">03</div><div class="project-body">
+            <div class="project-meta"><span>MYSQL · PHP</span><a href="https://github.com/pallasivasai/Signup-login-system-with-working-data-base" target="_blank">Repository ↗</a></div>
+            <h3>Authentication System</h3>
+            <p>Complete signup and login system with working MySQL integration, PHP backend logic and session management.</p>
+            <div class="tags"><span>MySQL</span><span>PHP</span><span>HTML</span><span>Sessions</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-number">04</div><div class="project-body">
+            <div class="project-meta"><span>MYSQL · PHP</span><a href="https://github.com/pallasivasai/votesystem" target="_blank">Repository ↗</a></div>
+            <h3>Vote Management System</h3>
+            <p>Database-driven voting application built with PHP for managing elections and polls.</p>
+            <div class="tags"><span>MySQL</span><span>PHP</span><span>Database Design</span></div>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-number">05</div><div class="project-body">
+            <div class="project-meta"><span>SQLITE · PYTHON</span><a href="https://github.com/pallasivasai/HR-Workforce-Employee-Performance-Management-System" target="_blank">Repository ↗</a></div>
+            <h3>HR Workforce Management</h3>
+            <p>Database-driven HR platform for employee management, performance, attendance, goals, leave, Employee 360 and reporting.</p>
+            <div class="architecture"><span>Streamlit</span><b>→</b><span>Python</span><b>→</b><strong>SQLite + SQL</strong></div>
+            <div class="tags"><span>SQLite</span><span>SQL</span><span>Python</span><span>Pandas</span><span>OpenPyXL</span><span>ReportLab</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sql" class="section sql-section">
+      <div class="section-label">04 / SQL LAB</div>
+      <div class="project-heading"><h2>Code that shows the <span>database thinking.</span></h2><p>Examples inspired by the database concepts demonstrated across the projects.</p></div>
+      <div class="code-tabs">
+        <button class="tab active" data-tab="query">Query</button><button class="tab" data-tab="trigger">Trigger</button><button class="tab" data-tab="join">Join</button>
+      </div>
+      <div class="code-window">
+        <div class="code-head"><span>database.sql</span><button id="copyBtn">Copy code</button></div>
+        <pre id="codeBlock"></pre>
+      </div>
+    </section>
+
+    <section class="section workflow">
+      <div class="section-label">05 / HOW I THINK ABOUT DATA</div>
+      <div class="flow"><div><b>01</b><h3>Model</h3><p>Define entities, relationships, keys and constraints.</p></div><i>→</i><div><b>02</b><h3>Store</h3><p>Choose the right relational database and structure.</p></div><i>→</i><div><b>03</b><h3>Query</h3><p>Write clear, reliable SQL for application workflows.</p></div><i>→</i><div><b>04</b><h3>Automate</h3><p>Use triggers and business rules where they belong.</p></div></div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-label">06 / CONTACT</div>
+      <h2>Let's build something <span>data-driven.</span></h2>
+      <p>Interested in database development, SQL, backend systems or data-focused applications?</p>
+      <div class="actions"><a class="primary" href="mailto:imsivasai01@gmail.com">Email me ↗</a><a class="secondary" href="https://www.linkedin.com/in/pallasivasai/" target="_blank">LinkedIn ↗</a><a class="secondary" href="https://github.com/Palla-siva-sai" target="_blank">GitHub ↗</a></div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Palla Siva Sai</span><span>SQL · MySQL · SQLite · Database Design</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
