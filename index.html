@@ -79,7 +79,7 @@
             <div class="project-meta"><span>MYSQL · SQL TRIGGERS</span><a href="https://github.com/pallasivasai/saibank" target="_blank">Repository ↗</a></div>
             <h3>SAIBANK</h3>
             <p>Banking system featuring a time-bound payment reversal mechanism using SQL triggers for transaction monitoring and rollback.</p>
-            <div class="architecture"><span>React / TypeScript</span><b>→</b><span>Lovable Cloud</span><b>→</b><strong>MySQL + Triggers</strong></div>
+            <div class="architecture"><span>React / TypeScript</span><b>→</b><span>Application Logic</span><b>→</b><strong>MySQL + Triggers</strong></div>
             <div class="tags"><span>MySQL</span><span>SQL Triggers</span><span>Transactions</span><span>React</span><span>TypeScript</span></div>
           </div>
         </article>
@@ -117,6 +117,43 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section id="saibank-proof" class="section proof">
+      <div class="section-label">03A / SAIBANK — VISUAL PROOF</div>
+      <div class="project-heading">
+        <h2>See the <span>transaction flow.</span></h2>
+        <p>Real SAIBANK UI flow: payment → completed transaction → wrong-payment reversal → amount restored.</p>
+      </div>
+      <div class="proof-grid">
+        <a class="proof-card" href="https://saibank.lovable.app/dashboard" target="_blank" rel="noopener">
+          <div class="proof-window dashboard-window">
+            <div class="proof-top"><span></span><span></span><span></span><b>SAIBANK / dashboard</b></div>
+            <div class="proof-body">
+              <strong>Recent Transactions</strong>
+              <small>Your latest financial activities</small>
+              <div class="proof-row"><span>course fees</span><b>-$15000.00</b></div>
+              <div class="proof-row"><span>Money transfer</span><b>-$10.00</b></div>
+              <div class="proof-row success"><span>WRONG_PAYMENT_REVERSAL</span><b>+$189797.00</b></div>
+            </div>
+          </div>
+          <div class="proof-caption"><span>01</span><div><b>Dashboard</b><small>Live SAIBANK dashboard</small></div><i>↗</i></div>
+        </a>
+
+        <a class="proof-card" href="https://saibank.lovable.app/transactions" target="_blank" rel="noopener">
+          <div class="proof-window">
+            <div class="proof-top"><span></span><span></span><span></span><b>SAIBANK / transactions</b></div>
+            <div class="proof-body history">
+              <strong>Transaction History</strong>
+              <div class="proof-row"><span>course fees · completed</span><b>-$15000.00</b></div>
+              <div class="proof-row success"><span>Wrong payment reversed — amount restored</span><b>+$15000.00</b></div>
+              <div class="proof-status">completed → reversed → amount restored</div>
+            </div>
+          </div>
+          <div class="proof-caption"><span>02</span><div><b>Reversal workflow</b><small>Open the transaction history</small></div><i>↗</i></div>
+        </a>
+      </div>
+      <div class="proof-note"><span>DB EVENT</span> A wrong payment is marked for reversal, the original debit is reversed, and the restored amount appears as a separate transaction.</div>
     </section>
 
     <section id="sql" class="section sql-section">
